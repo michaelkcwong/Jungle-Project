@@ -32,6 +32,9 @@
     </table>
   </div>
 
+  <% if enhanced_cart.empty? %>
+  <div class="alert alert-warning"> Your <em>cart</em> is <strong>empty</strong>! Head back to <%= link_to 'Home Page', :root%> to add items to your cart! </div>
+  <% else %>
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -48,5 +51,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %>
 </section>
