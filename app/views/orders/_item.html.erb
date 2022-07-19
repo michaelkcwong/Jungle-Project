@@ -1,6 +1,6 @@
 <tr>
   <td>
-    <%= image_tag product.image.tiny %>
+    <%= image_tag product.image.tiny.url %>
   </td>
   <td>
     <h4><%= product.name %></h4>
@@ -8,12 +8,12 @@
     <p><%= product.description %></p>
   </td>
   <td>
-  <%= number_to_currency(product.price, precision: 2) %>
+    <%= number_to_currency(product.price, precision: 2) %>
   </td>
   <td>
-  <%= quantity %>
+    <%= quantity %>
   </td>
   <td>
-  <%= number_to_currency((product.price * quantity), precision: 2) %>
+    <%= number_to_currency((product.price * quantity), precision: 2) %>
   </td>
-  </tr>
+</tr>
