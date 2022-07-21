@@ -1,12 +1,7 @@
-Admin::ProductsController < ApplicationController
-
-user_name = ENV['USER_NAME']
-user_password = ENV['USER_PASSWORD']
-
-http_basic_authenticate_with name: user_name, password: user_password
+class Admin::CategoriesController < ApplicationController
 
 def index
-  @categories = Category.all.order(:name)
+  @categories = Category.all
 end
 
 def new
@@ -30,5 +25,4 @@ def category_params
     :name
   )
 end
-
 end
