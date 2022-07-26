@@ -15,8 +15,6 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
-end
-
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
   end

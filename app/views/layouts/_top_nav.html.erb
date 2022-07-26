@@ -66,14 +66,14 @@
           My Cart (<%= cart.size %>) <% end %>
         </li>
         <% if current_user %>
-        <li> 
+        <li style="margin-right: 1rem; margin-left: 0.75rem""> 
           <%= link_to "Logout", '/logout' %> 
         </li>
         <% else %>
-        <li>
+        <li style="margin-right: 1rem; margin-left: 0.75rem"">
           <%= link_to 'Login', '/login' %> 
         </li>
-        <li> 
+        <li style="margin-right: 1rem; margin-left: 0.75rem""> 
           <%= link_to 'Sign Up', '/signup' %> 
         </li>
       <% end %>
